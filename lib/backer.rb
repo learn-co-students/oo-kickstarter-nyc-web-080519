@@ -7,11 +7,8 @@ class Backer
   end 
 
   def back_project(project)   #takes the action to back a project / add a project 
-    if !project.backers.include?(self)
-      @backed_projects << project 
-      # project.add_backer(self)
-      project.backers << self
-    end 
+      @backed_projects << project #project is shoveled into the array @backed_projects 
+      project.backers << self  #self/Backer instance is shoveled into project.backers (.backers calls on the array in project.rb)
   end 
 
 end #end of class Backer 

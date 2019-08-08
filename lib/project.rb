@@ -7,11 +7,10 @@ class Project
   end 
 
   def add_backer(backer)
-    if !backer.backed_projects.include?(self)   # the backer isnt in the backers array
+    # if !backer.backed_projects.include?(self)   # the backer isnt in the backers array
       @backers << backer
       # backer.back_project(self)
       backer.backed_projects << self
-    end 
   end
 
 end #end of class Project 
